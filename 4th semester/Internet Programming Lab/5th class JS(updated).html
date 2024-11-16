@@ -1,0 +1,29 @@
+<htmL>
+    <head>
+        <script>
+            function validateform() {
+                var name = 
+                document.forms.Regform.Namefield.value;
+                var regname = /\d+$/;
+                
+                if(name == "" || regname.test(name))
+                {
+                window.alert("Please enter your name properly.");
+                return false;
+                }
+               
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Registraion Form</h1>
+        <form name="Regform" onsubmit="return validateform()" method="post">
+        <p>Name:<input type="text" size="50" name="Namefield"></p>
+        <br>
+        <p><input type="submit" value="send" name="Submit"/>
+        <input type="reset" value="Reset" name="Reset"/>
+        </p>
+        </form>
+        </body>
+</htmL>

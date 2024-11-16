@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <script>
+        function validateForm() {
+            var name =
+                document.forms.RegForm.Name.value;
+            var regName = /^[a-zA-Z]+\d*$/; // Javascript reGex for Name validation
+        
+            if (regName.test(name)){
+                window.alert("name accepted");
+            }
+            else
+                { 
+                    window.alert(" name not accepted, Please enter correctly");
+                    return false;}
+
+
+            var email =
+            document.forms.RegForm.EMail.value;        
+            var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            if (regEmail.test(email)) {
+            window.alert("Email accepted");
+            return true;
+            }
+             else
+                { 
+                    window.alert(" email not accepted, Please enter correctly");
+                    return false;
+                }
+                
+                var phone =
+                document.forms.RegForm.Phone.value;
+            var regName = /^\d+$/; // Javascript reGex for Phone validation
+        
+            if (regName.test(phone)&&phone.length==11){
+                window.alert("Phone Number accepted");
+            }
+            else
+                { 
+                    window.alert("Phone Number is not Valid, Please enter correctly");
+                    return false;}
+                var pwd =
+            document.forms.RegForm.Password.value;        
+            var regPwd=/^\d*[\.-]+\w+\d+$/;
+            
+         if (regPwd.test(pwd) && pwd.length >= 8) {
+                window.alert("password accepted");
+                return true;
+            }
+            else{ 
+                    window.alert(" Password not accepted, Please enter correctly");
+                    return false;
+            }
+
+
+           
+        }
+    </script>
+
+    <style>
+        div {
+            box-sizing: border-box;
+            width: 100%;
+            border: 100px solid black;
+            float: left;
+            align-content: center;
+            align-items: center;
+        }
+        
+        form {
+            margin: 0 auto;
+            width: 600px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <form name="RegForm" onsubmit="return validateForm()" method="post">
+
+        <p>Name: <input type="text" size="65" name="Name" /></p> <br/>
+        <p>Email: <input type="text" size="65" name="EMail" /></p>
+        <p>Phone Number: <input type="digit" size="65" name="Phone" /></p>
+        <p>Password: <input type="text" size="10" name="Password" /></p>
+        <p>Conferm Password: <input type="text" size="10" name="Password" /></p>
+        <br />
+
+
+
+        <p>
+            <input type="submit" value="Register" name="Submit" />
+            
+
+    </form>
+</body>
+
+</html>

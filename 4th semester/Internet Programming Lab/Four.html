@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Question 3</title>
+        <script>
+            function validateForm() {
+                var name =
+                    document.forms.RegForm.Name.value;
+                var regName = /^[A-Za-z]+$/;
+            
+                if (regName.test(name)){
+                    window.alert("name accepted");
+                }
+                else
+                    { 
+                        window.alert(" name not accepted");
+                        return false;}
+                        var email =
+            document.forms.RegForm.EMail.value;        
+            var regEmail=/^\w+([.]?\w+)*@\w+([.]?\w+)*(.\w{2,3})+$/;
+
+            if (regEmail.test(email)) {
+            window.alert("Email accepted");
+            return true;
+            }
+             else
+                { 
+                    window.alert(" email not accepted");
+                    return false;
+                }
+            }
+                        </script>
+    
+    </head>
+    <body>
+        <h3><b>Registration Form</b></h3>
+        <form name="RegForm" onsubmit="return validateForm()" method="post">
+         <p>Name: <input type="text" size="65" name="Name" /></p>
+        <p>Email: <input type="text" size="65" name="EMail" /></p>
+    
+         <p><input type="submit" value="Register" name="Submit" /></p>   
+            
+
+    </form>
+    </body>
+</html> 

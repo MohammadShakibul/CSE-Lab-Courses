@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style type="text/css">
+            #demo4{
+                display:none;
+                background-color:rgb(147, 17, 106);
+                padding: 15px;
+                border:1px solid white;
+                color:white;
+                width:115px;
+            }
+        </style>
+    </head>
+        <body>
+           
+            <button onclick="document.getElementById('demo').innerHTML=Date()">The Time is</button>
+            <button onmouseover="document.getElementById('demo1').innerHTML=Date()">The Time is</button>
+            <button onmouseout="document.getElementById('demo2').innerHTML=Date()">The Time is</button>
+            <button onmousewheel="document.getElementById('demo3').innerHTML=Date()">The Time is</button>
+            <button id='butt' onmousewheel="document.getElementById('but').style.backgroundColor='green '">Evergreen</button>
+            <button onmousewheel="document.getElementById('demo4').style.display='block'">Show Content</button>
+            <p id="demo" ></p>
+            <p id="demo1" ></p>
+            <p id="demo2" ></p>
+            <p id="demo3" ></p>
+            <span id="demo4" >Welcome</span>
+
+            <div class="dropdown">
+                <button onmousewheel="document.getElementById('demo4').style.display='block'">
+                  Courselist
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">CSE</a>
+                  <a class="dropdown-item" href="#">EEE</a>
+                  <a class="dropdown-item" href="#">CE</a>
+                </div>
+              </div>
+        </body>
+    
+</html>
