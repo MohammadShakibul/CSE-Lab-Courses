@@ -1,0 +1,17 @@
+
+select name in mark john tom ben
+do  
+    echo "$name selected" 
+done
+
+#
+select name in mark john ben
+do
+  case $name in
+    mark)
+       echo mark selected
+       ;;
+       *)
+       echo "error pleasde provide the no. between 1..3"
+       esac
+ done

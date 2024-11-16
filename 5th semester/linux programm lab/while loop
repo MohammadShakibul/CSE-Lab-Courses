@@ -1,0 +1,19 @@
+
+n=1
+
+whil [$n -le 10 ]
+do
+    echo "$n"
+    n=$(( n+1 ))
+    
+done
+
+#
+n=1
+
+whil [$n -le 10 ]
+do
+    echo "$n"
+    (( n++ ))
+    
+done

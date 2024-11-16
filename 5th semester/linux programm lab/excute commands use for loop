@@ -1,0 +1,18 @@
+# -d for dir
+for item in *
+do
+  if [ -d $item ]
+  them
+     echo $item
+     fi
+done
+
+# -f for file
+for item in *
+do
+  if [ -f $item ]
+  them
+     echo $item
+     fi
+done
+

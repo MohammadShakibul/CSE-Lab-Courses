@@ -1,0 +1,16 @@
+ls [options] [fd]
+
+# ls
+# ls documents/
+# ls -
+# ls ..
+# ls ../..
+# ls -l 
+# ls -a
+# ls -al
+# ls -ls
+#  ls Document/*.*
+# ls document/*.html
+# ls -ls > out.txt
+# ls -d */
+man ls

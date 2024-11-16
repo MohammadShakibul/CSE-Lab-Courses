@@ -1,0 +1,6 @@
+cat /etc/shells
+
+# cd desktop/
+# touch hello.sh
+# ls -al
+# code .

@@ -1,0 +1,15 @@
+
+os=('ubuntu' 'windows' )
+os[2]='mac'
+echo "${os[@]}"
+echo "${os[0]}"
+echo "${!os[@]}"
+echo "${#os[@]}"
+#
+os=('ubuntu' 'windows' )
+os[2]='mac'
+unset os[2]
+echo "${os[@]}"
+echo "${os[0]}"
+echo "${!os[@]}"
+echo "${#os[@]}"

@@ -1,0 +1,55 @@
+
+count=10
+
+if [ $count ]
+then
+   statement
+fi  
+ 
+#
+if [ $count  -ne 9]
+then
+   echo "condition is true"
+fi 
+  
+#
+if [ $count  -gt 9]
+then
+   echo "condition is true"
+fi 
+
+#
+if (($count  > 9))
+then
+   echo "condition is true"
+fi 
+
+#
+if [[$word == "b"]]
+then
+   echo "condition is true"
+else
+   echo "condition is false"
+fi 
+
+#
+if [[$word == "b"]]
+then
+   echo "condition b is true"
+elif [$word == "a"]]
+then
+    echo "condition a is true"
+else
+    echo "condition is false"
+fi 
+
+
+
+
+
+
+
+
+
+
+

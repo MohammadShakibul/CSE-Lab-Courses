@@ -1,0 +1,16 @@
+
+function name(){
+  commands
+  }
+ #exmpal
+ 
+ function Hello(){
+   echo "Hello"
+   }
+   quit () {
+   exit
+   }
+   Hello
+   echo "foo"
+ quit
+ 

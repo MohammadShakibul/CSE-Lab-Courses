@@ -1,0 +1,10 @@
+echo "hello world" # this is a comment
+
+echo our shell name $BASH
+echo our shell version name is $BASH_VERSION
+
+
+name=Mark
+v=10
+echo the name is $name
+echo value $val

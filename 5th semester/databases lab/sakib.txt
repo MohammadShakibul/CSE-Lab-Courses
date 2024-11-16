@@ -1,0 +1,82 @@
+
+// 1. Go to XAMPP.
+// 2. Start Apache & Mysql.
+// 3. Go to Shell.
+// 4. write " mysql -u root -p ".
+// 5. Enter.
+// 6. To Create database write "create database Name;"
+                                create database Sabbbir; 
+
+// 7. To see all databases write" show databases"
+
+// 8. To use any databases write "use database name"
+                                  use sabbir;
+
+// 9. To create anay table write " create table table-name"
+                                   create table student(id int , name varchar(20), dep varchar(20));
+                                   create table Course(course_code varchar(20), course_name varchar(40),course_credit int(20),course_hour int(20),course_teacher varchar(30));
+
+// 10. To show table data type  write " desc or describe table_name"
+                             desc student;  or describe student;
+
+
+// 11. To show table data  write " select * from  Employe1 Group by  EMP_name desc; table_name"
+                                    select *from Course;
+
+// 12. to change table name write " rename table_name to new_table_name"
+                                    rename student to student_information.
+// 11. To insert values in table write " select *from table_name"
+                                   insert into Course(course_code, course_name ,course_credit ,course_hour ,course_teacher) values('CSE 304','Linux Programming Lab',1,1,'MTAS');
+                                   insert into Course(course_code, course_name ,course_credit ,course_hour ,course_teacher) values('CSE 303','Linux Programming ',3,1,'MTAS');
+                                   insert into Course(course_code, course_name ,course_credit ,course_hour ,course_teacher) values('CSE 311','Artificial Intelligence',3,1,'FTTE');
+                                   insert into Course(course_code, course_name ,course_credit ,course_hour ,course_teacher) values('CSE 312','Artificial Intelligence Lab',1,2,'RD');
+                                   insert into Course(course_code, course_name ,course_credit ,course_hour ,course_teacher) values('CSE 313','Computer Networks',3,1,'SKC');
+                                   insert into Course(course_code, course_name ,course_credit ,course_hour ,course_teacher) values('CSE 314','Computer Networks Lab',1,2,'RD');
+                                   insert into Course(course_code, course_name ,course_credit ,course_hour ,course_teacher) values('CSE 315','Database Management System',3,1,'MMS');
+                                   insert into Course(course_code, course_name ,course_credit ,course_hour ,course_teacher) values('CSE 316','Database Management System Lab',1,2,'TYL');
+                                   insert into Course(course_code, course_name ,course_credit ,course_hour ,course_teacher) values('CSE 318','Numerical Methods and Analysis',2,2,'JAT');
+                                   insert into Course(course_code, course_name ,course_credit ,course_hour ,course_teacher) values('CSE 319','Computer 
+
+create table student(S_ID int PRIMARY KEY ,name varchar(20),Address varchar(50));
+ create table course(C_ID int PRIMARY KEY,C_name varchar(20),C_Teacher varchar(50),S_ID int,constraint fk_type FOREIGN KEY(S_ID)
+    ->  references student(S_ID));
+
+#UPDATE Employe1 SET EMP_name="Sakib",EMP_Dept ="cse", EMP_salary=4000
+    -> where EMP_ID =3;
+
+#UPDATE Employe1 SET EMP_name="himla"  where EMP_ID =3;
+
+# Delete from Employe1 where EMP_ID=3;
+# select EMP_name from  Employe1 where EMP_salary<9000;
+#select EMP_name from  Employe1 where EMP_Dept="cse";
+#select sum(EMP_salary) from  Employe1;
+#
+#select Min(EMP_salary) from  Employe1;
+#select Avg(EMP_salary) from  Employe1;
+#select count(EMP_Dept) from  Employe1;
+
+#select DISTINCT(EMP_Dept) from  Employe1;
+# select * from  Employe1 Group by  EMP_ID;
+# select * from  Employe1 Group by  EMP_name;
+#select * from  Employe1 Group by  EMP_name desc;
+#select * from  Employe1 where EMP_salary=(select Max(EMP_salary) from Employe1);
+
+select max(EMP_salary) from  Employe1 where EMP_salary<(select max(EMP_salary) from Employe1;
+
+#select max(EMP_salary) from  Employe1 where EMP_salary<(select max(EMP_salary) from Employe1);
+#select * from  Employe1 where EMP_salary=(select max(EMP_salary) from  Employe1 where EMP_salary<(select max(EMP_salary) from Employe1));
+
+#select * from customer where name like "%a%";
+#select * from customer where name like "%a";
+#select * from customer where name like "a%";
+#select * from customer where id <= (select count(id)/2 from customer);
+
+#select * from customer where country in('BD');
+#select * from customer where country in('BD','us');
+
+# SELECT  country,Count(*) FROM customer group BY country;
+#select * from customer where country in('BD');
+#select * from customer where country in('BD','us');
+
+
+   

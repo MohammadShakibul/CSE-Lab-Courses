@@ -1,0 +1,99 @@
+
+// 1. Go to XAMPP.
+// 2. Start Apache & Mysql.
+// 3. Go to Shell.
+// 4. write " mysql -u root -p ".
+// 5. Enter.
+// 6. To Create database write "create database Name;"
+                                create database Sabbir; 
+
+// 7. To see all databases write" show databases"
+
+// 8. To use any databases write "use database name"
+                                  use sabbir;
+
+// 9. To create anay table write " create table table-name(  );"
+                                   create table student(id int , name varchar(20), dep varchar(20));
+                                   create table Course(course_code varchar(20), course_name varchar(40),course_credit int(20),course_hour int(20),course_teacher varchar(30));
+                                   create table Employees ( Emp_Id int , Emp_Name varchar(20), Emp_Dept varchar(20),Emp_Salary int );              
+                                   create table Customer ( Customer_Id int , Customer_Name varchar(20), Customer_Salary int, country varchar(20) );
+
+// 10. To insert values in table write " select *from table_name"
+                                
+                                   insert into Course(course_code, course_name ,course_credit ,course_hour ,course_teacher) values('CSE 303','Linux Programming ',3,1,'MTAS');
+                      
+                                   insert into Customer values(1,'Anik',1200,'Bangladesh'),(2 , 'Abid ',2000,'India '),(3 ,'Sakib ',2300 ,'USA '),(4 ,'Urmi ',4000 ,'Singapore '),( 5,'Anwar ',5000 ,'Amirat '
+                                   insert into Employees values(1,'Akshay', 'Finance',9000),(2,'Sumit', 'Marketing',4000),(3,'Shyam', 'sales',5000),(4,'Yatin', 'Coding',4000),(5,'Manoj', 'Marketing ',5000);
+
+                                   insert into Employees values(1,'Akshay', 'Finance',9000);
+                                   insert into Employees values(2,'Sumit', 'Marketing',4000);
+
+                       
+
+
+//11. To   update table write " UPDATE table_name SET Column_Name=' ',Column_Name=' ' WHERE Column_Name=' ';"
+
+                                UPDATE Employees SET Emp_Name='Sabbir', Emp_Dept='Coding', Emp_Salary ='10000' WHERE Emp_Id=5;
+
+
+
+// 12. To show table data type  write " desc or describe table_name"
+                             desc student;  or describe student;
+
+
+// 13. To show table data  write " select *from table_name"
+                                    select *from Course;
+
+// 14. to change table name write " rename table_name to new_table_name"
+                                    rename student to student_information.
+
+
+//15. To find the 2nd highest Salary.
+
+                         select *FROM Employees WHERE Emp_Salary=(select  MAX(Emp_salary)AS Emp_salary FROM Employees WHERE Emp_Salary <> (SELECT MAX(Emp_Salary) FROM Employees));
+      
+//16. To find the 3rd highest Salary.
+
+                        select *FROM Employees WHERE Emp_Salary=(select MAX(Emp_Salary)AS Emp_Salary FROM Employees WHERE Emp_Salary <(SELECT MAX(Emp_Salary) FROM Employees WHERE Emp_Salary<(SELECT MAX(Emp_Salary) FROM Employees)));
+
+//17. To delete a table write " drop table_name"
+                                drop Customer    
+
+//18. select country,count(*) from Customer group by country ; 
+
+// 19. To show the even id in a table write " SELECT * FROM table_name WHERE MOD(Id, 2) = 0; "
+                                  SELECT * FROM Customer WHERE MOD(Customer_Id, 2) = 0;
+
+// 20. To show the odd id in a table write "SELECT * FROM table_name WHERE MOD(Id, 2) = 1; "
+                                  SELECT * FROM Customer WHERE MOD(Customer_Id, 2) = 1;
+
+
+
+   select *from Customer where  Customer_Name  like "%a%";
+   select *from Customer where  Customer_Name  like "%a";
+
+
+select *from Customer where  Customer_Name  like "a%";
+
+ select *from Customer where  Customer_Id <=(select count(*)/2 from Customer);
+
+  SELECT * FROM Customer WHERE MOD(Customer_Id, 2) = 1;
+
+
+   select *from customer where country in ('Bangladesh','India');
+     select *from customer where country ="Kuyet";
+
+  select *from Customer order by country desc;
+ select *from Customer order by country ;
+   select *from Customer group  by country desc; 
+ select *from Customer group by country ;
+         
+
+select *from Employees order by Emp_Salary desc;
+
+Inner Join -- MariaDB [tanveer_tarek]> select ID,NAME,DATE,AMOUNT from customers join orders on customers.ID=orders.CUSTOMER_ID;
+left Join--  select ID,NAME,DATE,AMOUNT from customers left join orders on customers.ID=orders.CUSTOMER_ID;
+right Join--  select ID,NAME,DATE,AMOUNT from customers right join orders on customers.ID=orders.CUSTOMER_ID;
+where amount>2000 --  select ID,NAME,DATE,AMOUNT from customers join orders on customers.ID=orders.CUSTOMER_ID where AMOUNT>2000;
+ Full Outer Join -- select ID,NAME,DATE,AMOUNT from customers left join orders on customers.ID=orders.CUSTOMER_ID UNION select ID,NAME,DATE,AMOUNT from customers right join orders on customers.ID=orders.CUSTOMER_ID;
+ three table join --- MariaDB [tanveer_tarek]> select ID,NAME,DATE,AMOUNT,MODEL,QUANTITY from customers join orders on customers.ID=orders.CUSTOMER_ID join product on customers.ID=product.CUSTOMER_ID;

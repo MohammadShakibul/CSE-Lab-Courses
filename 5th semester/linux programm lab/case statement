@@ -1,0 +1,26 @@
+
+case expression in 
+    pattern1 )
+            statements ;;
+    pattern2 )
+            statements ;;
+    ...
+esac
+
+#exampal-
+
+vehicle=$1
+
+case $vehicle in
+    "CAR" )
+        echo "rent of $vehical is 59 dollar" ;;
+    * )
+    echo "unknown vehicle" ;;
+    
+ esac    
+        
+        
+        
+        
+        
+        

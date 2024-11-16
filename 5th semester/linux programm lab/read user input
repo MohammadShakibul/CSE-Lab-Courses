@@ -1,0 +1,16 @@
+
+echo "enter name: "
+read name1,name2
+echo "enter name : $name1,$name2"
+
+
+read -p 'username : ' user_var
+read =-sp 'password : ' pass_var
+echo
+echo "username : $user_var"
+echo "password : $pass_var"
+
+
+echo "enter name : "
+resd
+echo "name : #REPLY"

@@ -1,0 +1,25 @@
+
+function print (){
+name=$1
+echo "the name is $name"
+}
+
+name="tom"
+echo "the name is $name"
+
+print max
+echo "foo"
+
+#local varibles
+
+function print (){
+local name=$1
+echo "the name is $name"
+}
+
+name="tom"
+echo "the name is $name : befor"
+
+print max
+echo "the name is $name : after"
+
