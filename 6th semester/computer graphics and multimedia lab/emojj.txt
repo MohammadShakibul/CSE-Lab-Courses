@@ -1,0 +1,59 @@
+#include <graphics.h>
+
+
+int main()
+{
+    int gd = DETECT, gm;
+
+
+    initgraph(&gd, &gm, "");
+
+   circle(300, 200, 90);
+
+   circle(350, 200, 20);
+
+   circle(250, 200, 20);
+
+   arc(300, 250, 180, 370, 20);
+
+    getch();
+    closegraph();
+
+    return 0;
+}
+
+
+
+#include <graphics.h>
+
+
+int main()
+{
+    int gd = DETECT, gm;
+
+
+    initgraph(&gd, &gm, "");
+
+
+   circle(300, 200, 90);
+
+   setcolor(YELLOW);
+   circle(350, 200, 20);
+   circle(350, 200, 5);
+
+   circle(250, 200, 20);
+   circle(250, 200, 5);
+
+   setcolor(RED);
+   arc(300, 250, 370, 170, 20);
+
+
+
+
+    getch();
+    closegraph();
+
+    return 0;
+}
+
+
