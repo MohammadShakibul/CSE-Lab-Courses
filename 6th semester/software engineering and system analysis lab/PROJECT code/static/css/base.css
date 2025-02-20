@@ -1,0 +1,186 @@
+@import "bulma.css"; /* Assuming you're using Bulma for the general layout */
+
+/* Page background with gradient */
+.ColorX {
+  height: 100vh;
+  background: linear-gradient(to right, #3fada8, #808080);
+
+}
+
+/* General page content styling */
+.page-contents-style {
+  padding: 1.5rem;
+}
+
+/* Blurred navbar and other elements */
+.blurX {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Light-themed blurred container */
+.blur-white {
+  padding: 1.5rem;
+  font-weight: normal;
+  color: #23272a;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.205);
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark-themed blurred container */
+.blur-dark {
+  color: whitesmoke;
+  backdrop-filter: blur(10px);
+  background-color: #23272a;
+  box-shadow: 0px -5px 10px rgb(127, 148, 137);
+}
+
+/* Hero section styling */
+.hero-bodyX {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hero-bodyX div {
+  width: 100%;
+  align-content: center;
+}
+
+.hero-image img {
+  max-height: 380px;
+}
+
+/* Full page layout (flexbox-based sticky footer) */
+html, body {
+  height: 100%; /* Ensure full page height */
+  margin: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Makes sure the container fills the viewport */
+}
+
+.content-wrapper {
+  flex: 1; /* Makes this section take the available space, pushing footer down */
+}
+
+.footerX {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 100;
+}
+
+.footerX p {
+  margin: 0;
+}
+
+/* Footer links and small logo styles */
+.bulma-brand-logo {
+  height: 12px;
+}
+
+.dj {
+  height: 14px;
+  font-weight: bolder;
+  color: darkgreen;
+}
+
+/* Button styles */
+.page-title-button1,
+.page-title-button,
+.page-title-button2,
+.page-title-box {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.page-title-button1 {
+  background-image: linear-gradient(to right, #606c88 0%, #3f4c6b 51%, #606c88 100%);
+}
+
+.page-title-button {
+  background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
+}
+
+.page-title-button2 {
+  background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+}
+
+.page-title-box {
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+}
+
+.page-title-button:hover,
+.page-title-button1:hover,
+.page-title-button2:hover,
+.page-title-box:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Container and column styling */
+.containerX {
+  display: contents;
+  justify-content: space-evenly;
+  padding: 4px;
+}
+
+.columnX {
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 1%;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.columnX:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .containerX {
+    flex-direction: column;
+  }
+  .columnX {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+}
+
+/* Additional button styling */
+.more-button {
+  background-image: linear-gradient(to right, #B993D6 0%, #8CA6DB 51%, #B993D6 100%);
+  margin: 7px;
+  padding: 10px 30px;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.more-button:hover {
+  background-position: right center;
+  color: white;
+  text-decoration: none;
+}
