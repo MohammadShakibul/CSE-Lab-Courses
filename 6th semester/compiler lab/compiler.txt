@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+int match_pattern(const char *str) {
+    int i = 0;
+
+    // Count leading 'a's
+    while (str[i] == 'a') {
+        i++;
+    }
+
+    // Count following 'b's
+    int b_count = 0;
+    while (str[i] == 'b') {
+        b_count++;
+        i++;
+    }
+
+    // Check if there were any 'b's and if we reached the end of the string
+    return (b_count > 0 && str[i] == '\0');
+}
+
+int main() {
+    char input[100];
+
+    printf("Enter a string to match the pattern 'a*b+': ");
+    fgets(input, sizeof(input), stdin);
+
+    // Remove the newline character from fgets
+    input[strcspn(input, "\n")] = '\0';
+
+    if (match_pattern(input)) {
+        printf("The input matches the pattern 'a*b+'.\n");
+    } else {
+        printf("The input does not match the pattern 'a*b+'.\n");
+    }
+
+    return 0;
+}

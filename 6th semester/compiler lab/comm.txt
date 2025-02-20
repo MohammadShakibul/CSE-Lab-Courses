@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char str[300];
+    int f=0;
+    fgets(str,300,stdin);
+    printf("%s:",str);
+
+    int length=strlen(str);
+    for(int i =0;i<length;i++){
+        if(str[i]=='/'&&str[i+1]=='/'){
+            printf("single line comment\n");
+            f=1;
+            break;
+        }
+        else if (str[i]=='/'&&str[i+1]=='*'){
+            printf("Multiple line comment\n");
+            f=1;
+            break;
+        }
+    }
+    if(f==0){
+        printf("It's not a comment\n");
+    }
+    return 0;
+}
